@@ -1,0 +1,1 @@
+using UnityEngine; public class BackroomsFogPulse : MonoBehaviour { [SerializeField] private float baseDensity = 0.0045f; [SerializeField] private float pulseAmount = 0.0006f; [SerializeField] private float pulseSpeed = 0.25f; private void Update(){ RenderSettings.fogDensity = baseDensity + Mathf.Sin(Time.time * pulseSpeed) * pulseAmount; } }
